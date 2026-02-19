@@ -1,0 +1,16 @@
+#education {
+    background-color: azure;
+    border-radius: 10px;
+    padding: 5%;
+    margin: 3%;
+}
+
+.education-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+#education {
+    margin-top: 100px;
+}

@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.font-anton {
+    font-family: "Anton", sans-serif;
+}
+
+.font-unbun {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+section h2 {
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+body{
+    background-color: rgb(0, 0, 49);
+}
+
+.darkblue-color{
+    background: radial-gradient(circle, rgb(39, 39, 68) 20%, rgba(45, 53, 79, 1) 100%);
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+    }

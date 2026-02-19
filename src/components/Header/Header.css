@@ -1,0 +1,56 @@
+
+header{
+    padding-bottom: 10%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 2%;
+    padding-top: 4rem;
+}
+
+#linksSection {
+    display: flex;
+    list-style: none;
+    gap: 8%;
+    width: 50%;
+
+    justify-content: flex-end;
+    padding-right: 5%;
+    margin: 5px;
+}
+
+#contact {
+    display: flex;
+    width: 50%;
+
+    padding-left: 5%;
+    margin: 5px;
+}
+
+#name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+
+    font-size: 100px;
+}
+
+#name p {
+    font-size: 20px;
+    font-weight: 100;
+    padding: 2%;
+}
+
+#infoList{
+    display: flex;
+    justify-content: space-evenly;
+
+    list-style: none;
+    width: 100%;
+    
+    padding-left: 0px;
+}
