@@ -6,7 +6,7 @@ function Skills() {
     return (
         <>
         <section id="skills">
-            <h3 className='font-anton'>Web Developer</h3>
+            <h3 className='skills-title font-anton'>Web Developer</h3>
             <div className='all-skill-container'>
                 <div className='skill-container'>
                     <FontAwesomeIcon icon={faHtml5} className='icon html' />

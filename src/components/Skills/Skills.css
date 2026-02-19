@@ -1,8 +1,9 @@
-#skills h3 {
+.skills-title {
     text-align: center;
     margin-top: 100px;
     color: white;
     font-size: 4rem;
+    font-weight: 200;
 }
 
 .skill-container{
@@ -57,4 +58,30 @@
 
 .rStudio{
     color: #75AADB;
+}
+
+@media (max-width: 768px){
+    .skills-title{
+        font-size: 3rem;
+    }
+    .skill-container{
+        width: 200px;
+    }
+    .skill-container h4{
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px){
+    .skills-title{
+        font-size: 2.5rem;
+    }
+    .skill-container{
+        width: 140px;
+        margin: 20px;
+        padding: 10px;
+    }
+    .skill-container h4{
+        font-size: 14px;
+    }
 }

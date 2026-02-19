@@ -32,3 +32,17 @@ h1 {
     font-size: 3.2em;
     line-height: 1.1;
     }
+
+@media (max-width: 768px){
+    section h2{
+        font-size: 60px;
+        letter-spacing: 6px;
+    }
+}
+
+@media (max-width: 480px){
+    section h2{
+        font-size: 45px;
+        letter-spacing: 3px;
+    }
+}
