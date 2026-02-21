@@ -1,8 +1,10 @@
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from "react";
-import Brownies from "../../../assets/images/BrowniesPage-ss.png";
-import CRAPI from "../../../assets/images/CRAPI-ss.png";
-import MathGame from "../../../assets/images/MathGame-ss.png";
-import Quetzalink from "../../../assets/images/Quetzalink-ss.png";
+import Brownies from "../../assets/images/BrowniesPage-ss.png";
+import CRAPI from "../../assets/images/CRAPI-ss.png";
+import MathGame from "../../assets/images/MathGame-ss.png";
+import Quetzalink from "../../assets/images/Quetzalink-ss.png";
 import './Carousel.css';
 
 const image1 = Quetzalink;
@@ -59,27 +61,31 @@ function Carousel(){
                 <ul className='projects'>
                     <li>
                         <div className='left-project'>
-                            <img src={images[leftProject]}></img>
+                            <img key={leftProject} src={images[leftProject]} alt={`${leftProject} project image`}></img>
                         </div>
                     </li>
                     <li>
                         <div className="middle-project">
-                            <img src={images[midProject]}></img>
-                            <div className="information font-unbun">CLICK HERE</div>
+                            <img key={midProject} src={images[midProject]} alt={`${midProject} project image`}></img>
+                            <div className="button-container">
+                                <a href={`/projects/${midProject}`} className="information font-unbun">SEE MORE</a>
+                            </div>
                         </div>
                     </li>
                     <li>
                         <div className='right-project'>
-                            <img src={images[rightProject]}></img>
+                            <img key={rightProject} src={images[rightProject]} alt={`${rightProject} project image`}></img>
                         </div>
                     </li>
                 </ul>
             </div>
             <div className='buttons'>
                 <button onClick={Increment}>
-                    Left
+                    <FontAwesomeIcon icon={faChevronLeft} />
                 </button>
-                <button onClick={Decrement}>Right</button>
+                <button onClick={Decrement}>
+                    <FontAwesomeIcon icon={faChevronRight} />
+                </button>
             </div>
         </div>
     )

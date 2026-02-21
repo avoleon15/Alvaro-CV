@@ -40,3 +40,10 @@
         margin-bottom: 10px
     }
 }
+
+@media (max-width: 480px){
+    .image-holder{
+        height: 80px;
+        width: 80px;
+    }
+}

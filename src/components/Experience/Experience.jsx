@@ -2,7 +2,7 @@ import Brownies from "../../assets/images/BrowniesPage-ss.png";
 import CRAPI from "../../assets/images/CRAPI-ss.png";
 import MathGame from "../../assets/images/MathGame-ss.png";
 import Quetzalink from "../../assets/images/Quetzalink-ss.png";
-import Carousel from "./Carousel/Carousel";
+import Carousel from "../Carousel/Carousel";
 import './Experience.css';
 import ExperienceContainer from "./ExperienceContainer/ExperienceContainer";
 
