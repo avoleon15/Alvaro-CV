@@ -9,8 +9,15 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 50px;
+    flex-wrap: wrap;
 }
 
 #education {
     margin-top: 100px;
+}
+
+@media (max-width: 768px){
+    .education-container{
+        gap: 50px;
+    }
 }

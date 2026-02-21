@@ -1,6 +1,7 @@
 
 header{
-    padding-bottom: 10%;
+    padding: 4%;
+    padding-bottom: 14%;
 }
 
 nav {
@@ -20,6 +21,20 @@ nav {
     justify-content: flex-end;
     padding-right: 5%;
     margin: 5px;
+}
+
+#linksSection a, header nav h5{
+    font-size: 15px;
+    text-decoration: none;
+    color: rgba(245, 245, 245, 0.576);
+
+    transition: all 0.5s ease 0s;
+}
+
+#linksSection a:hover{
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.851)
 }
 
 #contact {
@@ -48,9 +63,41 @@ nav {
 #infoList{
     display: flex;
     justify-content: space-evenly;
-
-    list-style: none;
     width: 100%;
-    
     padding-left: 0px;
+    list-style: none;
+    color: rgba(245, 245, 245, 0.576);
+}
+
+@media (max-width: 768px){
+    #name{
+        font-size: 60px;
+    }
+    #infoList, #linksSection a, header nav h5{
+        font-size: 14px;
+    }
+    #linksSection a:hover{
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.851)
+    }
+}
+
+@media (max-width: 480px){
+    #name{
+        font-size: 50px;
+    }
+    #infoList, #linksSection a, header nav h5{
+        font-size: 12px;
+    }
+    #linksSection a:hover{
+        font-size: 13px;
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.851)
+    }
+    #infoList{
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+    }
 }

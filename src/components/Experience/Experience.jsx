@@ -2,19 +2,22 @@ import Brownies from "../../assets/images/BrowniesPage-ss.png";
 import CRAPI from "../../assets/images/CRAPI-ss.png";
 import MathGame from "../../assets/images/MathGame-ss.png";
 import Quetzalink from "../../assets/images/Quetzalink-ss.png";
+import Carousel from "../Carousel/Carousel";
 import './Experience.css';
 import ExperienceContainer from "./ExperienceContainer/ExperienceContainer";
 
-function Experience() {
+const image1 = Quetzalink
+const image2 = CRAPI
+const image3 = Brownies
+const image4 = MathGame
 
-    const image1 = Quetzalink
-    const image2 = CRAPI
-    const image3 = Brownies
-    const image4 = MathGame
+function Experience() {
 
     return (
         <section id="experience">
         <h2 className="font-anton experience-title">EXPERIENCE</h2>
+
+        <Carousel />
 
         <div className="experience-container">
 
