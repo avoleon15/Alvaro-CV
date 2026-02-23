@@ -9,9 +9,9 @@ function Home() {
     return (
         <>
         <Header />
-        <Skills />
-        <Education />
-        <Experience />
+        <section id="skills"><Skills /></section>
+        <section id="educarion"><Education /></section>
+        <section id="experience"><Experience /></section>
         <Footer />
         </>
     )

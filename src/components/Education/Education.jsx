@@ -1,8 +1,8 @@
 import DaleCarnegie from "../../assets/images/DALElogo.png";
 import UFM from "../../assets/images/UFMlogo.png";
 import ValleVerde from "../../assets/images/VVlogo.jpeg";
+import EducationContainer from "../EducationContainer/EducationContainer.jsx";
 import './Education.css';
-import EducationContainer from './EducationContainer/EducationContainer.jsx';
 
 
 function Education() {
