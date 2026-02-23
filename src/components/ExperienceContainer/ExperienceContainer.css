@@ -1,0 +1,73 @@
+.return-button{
+    position: fixed;
+    left: 5%;
+    top: 5%;
+
+/* From Uiverse.io by adamgiebl */
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #2f2873;
+    background-color: #ffffffc9;;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #2f2873;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #2f2873;
+
+}
+
+.return-button:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #2f2873;
+}
+
+
+.project-container{
+    margin: 10%;
+    color: rgba(255, 255, 255, 0.892);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-title{
+    font-size: 4rem;
+    margin: 0px;
+}
+
+.project-image-container{
+    height: 700px;
+    width: 600px;
+    overflow: hidden;
+    margin: 50px 0px 50px 0px;
+
+}
+
+.project-image-container img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.project-information{
+    width: 100%;
+
+    display: flex;
+    color: #cbcae4c3;
+}
+
+.project-description{
+    width: 65%;
+    text-align: start;
+}
+
+.project-list{
+    width: 35%;
+    text-align: start;
+}

@@ -1,19 +1,23 @@
-import './App.css'
-import Education from './components/Education/Education.jsx'
-import Experience from './components/Experience/Experience.jsx'
-import Footer from './components/Footer/Footer.jsx'
-import Header from './components/Header/Header.jsx'
-import Skills from './components/Skills/Skills.jsx'
+import { Route, Routes } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
+import Brownies from './pages/Brownies'
+import ClashRoyale from './pages/ClashRoyale'
+import Home from './pages/Home'
+import MathGame from './pages/MathGame'
+import Quetzalink from './pages/Quetzalink'
+
 
 function App() {
-
   return (
     <>
-      <Header/>
-      <Skills />
-      <Education />
-      <Experience />
-      <Footer />
+      <ScrollToTop/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/project/Quetzalink" element={<Quetzalink />} />
+        <Route path="/project/ClashRoyale" element={<ClashRoyale />} />
+        <Route path="/project/Brownies" element={<Brownies />} />
+        <Route path="/project/MathGame" element={<MathGame />} />
+      </Routes>
     </>
   )
 }

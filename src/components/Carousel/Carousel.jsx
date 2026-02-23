@@ -1,6 +1,7 @@
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import Brownies from "../../assets/images/BrowniesPage-ss.png";
 import CRAPI from "../../assets/images/CRAPI-ss.png";
 import MathGame from "../../assets/images/MathGame-ss.png";
@@ -13,6 +14,7 @@ const image3 = Brownies;
 const image4 = MathGame;
 
 const images = [image1, image2, image3, image4];
+const projectTitles = ["Quetzalink","ClashRoyale", "Brownies","MathGame"]
 
 function Carousel(){
 
@@ -33,7 +35,6 @@ function Carousel(){
         }
     },[midProject])
 
-
     const Increment=()=>{
 
         if(midProject == images.length - 1){
@@ -43,7 +44,6 @@ function Carousel(){
             setMidProject(midProject + 1)
         }
     }
-
 
     const Decrement=()=>{
         if(midProject == 0){
@@ -61,20 +61,20 @@ function Carousel(){
                 <ul className='projects'>
                     <li>
                         <div className='left-project'>
-                            <img key={leftProject} src={images[leftProject]} alt={`${leftProject} project image`}></img>
+                            <img key={leftProject} src={images[leftProject]} alt={`${projectTitles[leftProject]} project image`}></img>
                         </div>
                     </li>
                     <li>
                         <div className="middle-project">
-                            <img key={midProject} src={images[midProject]} alt={`${midProject} project image`}></img>
+                            <img key={midProject} src={images[midProject]} alt={`${projectTitles[midProject]} project image`}></img>
                             <div className="button-container">
-                                <a href={`/projects/${midProject}`} className="information font-unbun">SEE MORE</a>
+                                <Link to={`/project/${projectTitles[midProject]}`} className="information-button font-unbun">SEE MORE</Link>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div className='right-project'>
-                            <img key={rightProject} src={images[rightProject]} alt={`${rightProject} project image`}></img>
+                            <img key={rightProject} src={images[rightProject]} alt={`${projectTitles[rightProject]} project image`}></img>
                         </div>
                     </li>
                 </ul>
