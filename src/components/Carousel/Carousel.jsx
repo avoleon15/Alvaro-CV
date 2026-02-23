@@ -2,31 +2,20 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
-import Brownies from "../../assets/images/BrowniesPage-ss.png";
-import CRAPI from "../../assets/images/CRAPI-ss.png";
-import MathGame from "../../assets/images/MathGame-ss.png";
-import Quetzalink from "../../assets/images/Quetzalink-ss.png";
+import { projectsData } from '../../data/ProjectsData';
 import './Carousel.css';
-
-const image1 = Quetzalink;
-const image2 = CRAPI;
-const image3 = Brownies;
-const image4 = MathGame;
-
-const images = [image1, image2, image3, image4];
-const projectTitles = ["Quetzalink","ClashRoyale", "Brownies","MathGame"]
 
 function Carousel(){
 
     const[midProject, setMidProject] = useState(0);
-    const[leftProject, setLeftProject] = useState(images.length - 1);
+    const[leftProject, setLeftProject] = useState(projectsData.length - 1);
     const[rightProject, setRightProject] = useState(1);
 
     useEffect(()=>{
         if(midProject == 0){
-            setLeftProject(images.length - 1)
+            setLeftProject(projectsData.length - 1)
             setRightProject(+1)
-        } else if (midProject == images.length - 1){
+        } else if (midProject == projectsData.length - 1){
             setRightProject(0)
             setLeftProject(midProject-1)
         } else {
@@ -37,7 +26,7 @@ function Carousel(){
 
     const Increment=()=>{
 
-        if(midProject == images.length - 1){
+        if(midProject == projectsData.length - 1){
             setMidProject(0)
         }
         else{
@@ -47,7 +36,7 @@ function Carousel(){
 
     const Decrement=()=>{
         if(midProject == 0){
-            setMidProject(images.length - 1)
+            setMidProject(projectsData.length - 1)
         }
         else{
             setMidProject(midProject - 1)
@@ -61,20 +50,20 @@ function Carousel(){
                 <ul className='projects'>
                     <li>
                         <div className='left-project'>
-                            <img key={leftProject} src={images[leftProject]} alt={`${projectTitles[leftProject]} project image`}></img>
+                            <img key={leftProject} src={projectsData[leftProject].image} alt={`${projectsData[leftProject].title} project image`}></img>
                         </div>
                     </li>
                     <li>
                         <div className="middle-project">
-                            <img key={midProject} src={images[midProject]} alt={`${projectTitles[midProject]} project image`}></img>
+                            <img key={midProject} src={projectsData[midProject].image} alt={`${projectsData[midProject].title} project image`}></img>
                             <div className="button-container">
-                                <Link to={`/project/${projectTitles[midProject]}`} className="information-button font-unbun">SEE MORE</Link>
+                                <Link to={`/project/${projectsData[midProject].id}`} className="information-button font-unbun">SEE MORE</Link>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div className='right-project'>
-                            <img key={rightProject} src={images[rightProject]} alt={`${projectTitles[rightProject]} project image`}></img>
+                            <img key={rightProject} src={projectsData[rightProject].image} alt={`${projectsData[rightProject].title} project image`}></img>
                         </div>
                     </li>
                 </ul>
