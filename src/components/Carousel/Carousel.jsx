@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { projectsData } from '../../data/ProjectsData';
+import AddTogether from '../../utils/AddTogether';
 import './Carousel.css';
 
 function Carousel(){
@@ -57,7 +58,7 @@ function Carousel(){
                         <div className="middle-project">
                             <img key={midProject} src={projectsData[midProject].image} alt={`${projectsData[midProject].title} project image`}></img>
                             <div className="button-container">
-                                <Link to={`/project/${projectsData[midProject].id}`} className="information-button font-unbun">SEE MORE</Link>
+                                <Link to={`/project/${AddTogether(projectsData[midProject].title)}`} className="information-button font-unbun">SEE MORE</Link>
                             </div>
                         </div>
                     </li>
