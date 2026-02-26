@@ -69,6 +69,42 @@ nav {
     color: rgba(245, 245, 245, 0.576);
 }
 
+#buttonList{
+    margin: 100px 7% 0px 7%;
+    list-style: none;
+    padding-left: 0px;
+
+    display: flex;
+    gap: 5%;
+}
+
+#buttonList a{
+    flex: 1;
+    text-decoration: none;
+}
+
+.link-button{
+    text-align: center;
+    z-index: 1;
+/* From Uiverse.io by adamgiebl */
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #6b5cf3;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #6b5cf3;
+    border-radius: 10px;
+}
+
+.main-link-button{
+    background-color: #6b5cf3;
+    color: white;
+}
+
 @media (max-width: 768px){
     #name{
         font-size: 60px;
@@ -80,6 +116,10 @@ nav {
         font-size: 15px;
         color: rgb(255, 255, 255);
         text-shadow: 0 0 5px rgba(255, 255, 255, 0.851)
+    }
+    .link-button{
+        font-size: 15px;
+        padding: 12px 25px;
     }
 }
 
@@ -99,5 +139,9 @@ nav {
         flex-direction: column;
         text-align: center;
         gap: 4px;
+    }
+    .link-button{
+        font-size: 10px;
+        padding: 8px 18px;
     }
 }

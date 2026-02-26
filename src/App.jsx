@@ -1,19 +1,16 @@
-import './App.css'
-import Education from './components/Education/Education.jsx'
-import Experience from './components/Experience/Experience.jsx'
-import Footer from './components/Footer/Footer.jsx'
-import Header from './components/Header/Header.jsx'
-import Skills from './components/Skills/Skills.jsx'
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import ProjectPage from './pages/ProjectPage'
+import ScrollToTop from './utils/ScrollToTop.jsx'
 
 function App() {
-
   return (
     <>
-      <Header/>
-      <Skills />
-      <Education />
-      <Experience />
-      <Footer />
+      <ScrollToTop/>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/project/:projectName" element={<ProjectPage />} />
+      </Routes>
     </>
   )
 }

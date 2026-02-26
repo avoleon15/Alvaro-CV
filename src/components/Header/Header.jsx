@@ -19,6 +19,11 @@ return (
             <li className='font-unbun'>avoleon15@gmail.com</li>
             <li className='font-unbun'>+502 4677-6304</li>
         </ul>
+        <ul id="buttonList">
+            <a href='#skills'><li className='link-button font-unbun'>Skills</li></a>
+            <a href='#experience'><li className='link-button main-link-button font-unbun'>Experience</li></a>
+            <a href='#education'><li className='link-button font-unbun'>Education</li></a>
+        </ul>
     </header>
 </>
 )
