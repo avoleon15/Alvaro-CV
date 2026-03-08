@@ -5,7 +5,7 @@ import './ExperienceContainer.css';
 
 function ExperienceContainer(props){
 
-    const {title, description, list, image} = props;
+    const {title, description, list, image, link, stars} = props;
     const imageDescription = image + " project";
 
     return(
@@ -14,9 +14,11 @@ function ExperienceContainer(props){
             <FontAwesomeIcon icon={faArrowLeft} />
         </Link>
         <h2 className='project-title font-anton'>{title}</h2>
+        <h6>{stars}</h6>
         <div className='project-image-container'>
             <img src={image} alt={imageDescription}></img>
         </div>
+        <a href={link} target="_blank" alt="visit my project">Check it on GitHub</a>
         <div className='project-information'>
             <p className='project-description font-unbun'>{description}</p>
             <ul className='project-list font-unbun'>

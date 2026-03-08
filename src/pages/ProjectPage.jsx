@@ -17,6 +17,8 @@ function ProjectPage(){
             description={project.description}
             list={project.list}
             image={project.image}
+            link={data.html_url}
+            stars={data.stargazers_count}
         />
     </>
     )
