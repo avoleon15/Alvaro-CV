@@ -1,3 +1,4 @@
+import AtriviatePhoto from "../assets/images/Atriviate-ss.png";
 import BrowniesPhoto from "../assets/images/BrowniesPage-ss.png";
 import CRAPIPhoto from "../assets/images/CRAPI-ss.png";
 import MathGamePhoto from "../assets/images/MathGame-ss.png";
@@ -31,5 +32,12 @@ export const projectsData = [
         description:"Developed a Math Game which includes levels, lives, difficulty, and animation.",
         list:["HTML, CSS, JS"],
         image:MathGamePhoto
+    },
+    {
+        id: 5,
+        title:"Atriviate",
+        description:"Developed a landing page for a charity of UFM students wanting to raise money for the most in need.",
+        list:["HTML, CSS, JS"],
+        image:AtriviatePhoto
     }
 ]

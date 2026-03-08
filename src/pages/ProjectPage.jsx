@@ -7,13 +7,13 @@ import AddTogether from '../utils/AddTogether.jsx'
 function ProjectPage(){
     const { projectName } = useParams()
     const project = projectsData.find(p => AddTogether(p.title) === projectName)
-
-    const data = useFetch("http://api.github.com/repos/avoleon15/Alvaro-CV")
+    const { data, loading } = useFetch(`https://api.github.com/repos/avoleon15/${project.title}`)
+    if (loading) return <p>Loading...</p>
 
     return (
     <>
         <ExperienceContainer
-            title={project.title}
+            title={data.name}
             description={project.description}
             list={project.list}
             image={project.image}
