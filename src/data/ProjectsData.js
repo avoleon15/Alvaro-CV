@@ -30,5 +30,6 @@ export const projectsData = [
         title:"MathGame",
         description:"Developed a Math Game which includes levels, lives, difficulty, and animation.",
         list:["HTML, CSS, JS"],
-        image:MathGamePhoto},
+        image:MathGamePhoto
+    }
 ]

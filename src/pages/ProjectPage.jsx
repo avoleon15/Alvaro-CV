@@ -1,11 +1,14 @@
 import { useParams } from 'react-router-dom'
 import ExperienceContainer from '../components/ExperienceContainer/ExperienceContainer.jsx'
 import { projectsData } from '../data/ProjectsData.js'
+import { useFetch } from '../services/useFetch.js'
 import AddTogether from '../utils/AddTogether.jsx'
 
 function ProjectPage(){
     const { projectName } = useParams()
     const project = projectsData.find(p => AddTogether(p.title) === projectName)
+
+    const data = useFetch("http://api.github.com/repos/avoleon15/Alvaro-CV")
 
     return (
     <>
