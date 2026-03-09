@@ -1,7 +1,26 @@
-
-header{
+header {
+    position: relative;
     padding: 4%;
     padding-bottom: 14%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--nasa-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+header > * {
+    position: relative;
+    z-index: 1;
 }
 
 nav {
@@ -52,6 +71,7 @@ nav {
     padding: 3rem;
 
     font-size: 100px;
+    color: white;
 }
 
 #name p {
