@@ -3,6 +3,7 @@ import BrowniesPhoto from "../assets/images/BrowniesPage-ss.png";
 import CRAPIPhoto from "../assets/images/CRAPI-ss.png";
 import MathGamePhoto from "../assets/images/MathGame-ss.png";
 import QuetzalinkPhoto from "../assets/images/Quetzalink-ss.png";
+import SimonGamePhoto from "../assets/images/SimonGame-ss.png";
 
 export const projectsData = [
     {
@@ -14,14 +15,14 @@ export const projectsData = [
     },
     {
         id:2,
-        title:"Clash Royale API",
+        title:"ClashRoyale-API",
         description:"Using REST API integration I created a web page that fetches information for the player.",
         list:["Python", "HTML, CSS, JS", "REST API"],
         image:CRAPIPhoto
     },
     {
         id:3,
-        title:"Brownies Page",
+        title:"Brownies",
         description:"Created a page dedicated to selling brownies.",
         list:["React"],
         image:BrowniesPhoto
@@ -39,5 +40,12 @@ export const projectsData = [
         description:"Developed a landing page for a charity of UFM students wanting to raise money for the most in need.",
         list:["HTML, CSS, JS"],
         image:AtriviatePhoto
+    },
+    {
+        id: 6,
+        title:"SimonGame",
+        description:"Developed a Simon Game. Functions perfectly just like the original game. Saves the highest score. Has the option to remove sound or to keep it. Very fun game.",
+        list:["HTML, CSS, JS"],
+        image:SimonGamePhoto
     }
 ]
