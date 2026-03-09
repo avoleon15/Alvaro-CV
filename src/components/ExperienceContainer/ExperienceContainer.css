@@ -102,6 +102,7 @@
 .project-list{
     width: 35%;
     text-align: start;
+    font-size: 1.8rem;
 }
 
 @media (max-width: 768px){
@@ -111,6 +112,9 @@
     }
     .project-information{
         width: 450px;
+        font-size: 1.2rem;
+    }
+    .project-list{
         font-size: 1.2rem;
     }
 }
@@ -126,5 +130,8 @@
     .project-information{
         font-size: 0.8rem;
         width: 300px;
+    }
+    .project-list{
+        font-size: 0.8rem;
     }
 }

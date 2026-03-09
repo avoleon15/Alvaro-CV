@@ -5,7 +5,7 @@ import './ExperienceContainer.css';
 
 function ExperienceContainer(props){
 
-    const {title, description, list, image, link, stars, watchers} = props;
+    const {title, description, language, image, link, stars, watchers} = props;
     const imageDescription = image + " project";
 
     return(
@@ -25,11 +25,7 @@ function ExperienceContainer(props){
         <a className='project-link font-unbun' href={link} target="_blank" alt="visit my project">Check it on GitHub</a>
         <div className='project-information'>
             <p className='project-description font-unbun'>{description}</p>
-            <ul className='project-list font-unbun'>
-            {list.map((item, index) => (
-                <li key={index}>{item}</li>
-            ))}
-            </ul>
+            <h5 className='project-list font-unbun'>Mainly built on: {language}</h5>
         </div>
         
 
