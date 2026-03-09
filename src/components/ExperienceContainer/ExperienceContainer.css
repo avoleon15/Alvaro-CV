@@ -32,6 +32,25 @@
     margin: 0px;
 }
 
+.icon-star{
+    color: yellow;
+    font-size: 2rem;
+}
+
+.icon-watcher{
+    color: lightblue;
+    font-size: 2rem;
+}
+
+.project-stats{
+    display: flex;
+}
+
+.project-counter{
+    font-size: 2rem;
+    margin: 0px 10px 0px 0px;
+}
+
 .project-image-container{
     height: 700px;
     width: 600px;
@@ -44,6 +63,24 @@
     object-fit: cover;
     height: 100%;
     width: 100%;
+}
+
+.project-link{
+    text-align: center;
+    z-index: 1;
+/* From Uiverse.io by adamgiebl */
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #6b5cf3;
+    border-radius: 10px;
+    background-color: #6b5cf3;
 }
 
 .project-information{
