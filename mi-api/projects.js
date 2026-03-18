@@ -192,6 +192,20 @@ curl -X PATCH http://localhost:3001/testimonials/1 \
 -d '{"author": "Gladys" ,"role": "catedratico", "company": "UFM", "text": "Muy bien Alumno ese Alvaro", "createdAt": "2025-02-7"}'
 */
 
+// DELETE , elimina un testimonial por ID
+app.delete('/testimonials/:id', (req, res) => {
+    const index = testimonials.findIndex(p => p.id === parseInt(req.params.id));
+
+    if (index === -1) {
+        return res.status(404).json({ error: 'Testimonial no encontrado' });
+    }
+
+    const deleted = testimonials.splice(index, 1);
+    res.json({ message: 'Testimonial eliminado', testimonials: deleted[0] });
+});
+// curl -X DELETE http://localhost:3001/testimonials/1
+
+
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
