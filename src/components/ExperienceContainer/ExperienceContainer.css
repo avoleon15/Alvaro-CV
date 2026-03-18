@@ -18,7 +18,7 @@
 }
 
 .project-container{
-    margin: 10%;
+    margin: 3% 10% 5% 10%;
     color: rgba(255, 255, 255, 0.892);
 
     display: flex;
@@ -32,12 +32,33 @@
     margin: 0px;
 }
 
+.icon-star{
+    color: yellow;
+    font-size: 2rem;
+}
+
+.icon-watcher{
+    color: lightblue;
+    font-size: 2rem;
+}
+
+.project-stats{
+    display: flex;
+}
+
+.project-counter{
+    font-size: 1.5rem;
+    margin: 0px 20px 0px 0px;
+}
+
 .project-image-container{
     height: 700px;
     width: 600px;
     overflow: hidden;
     margin: 50px 0px 50px 0px;
 
+    border: 3px solid black;
+    border-radius: 10px;
 }
 
 .project-image-container img{
@@ -46,8 +67,28 @@
     width: 100%;
 }
 
+.project-link{
+    text-align: center;
+    z-index: 1;
+/* From Uiverse.io by adamgiebl */
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #6b5cf3;
+    border-radius: 10px;
+    background-color: #6b5cf3;
+}
+
 .project-information{
-    width: 100%;
+    width: 700px;
+    margin: 3%;
+    font-size: 1.8rem;
 
     display: flex;
     color: #cbcae4c3;
@@ -61,4 +102,36 @@
 .project-list{
     width: 35%;
     text-align: start;
+    font-size: 1.8rem;
+}
+
+@media (max-width: 768px){
+    .project-image-container{
+        height: 500px;
+        width: 380px;
+    }
+    .project-information{
+        width: 450px;
+        font-size: 1.2rem;
+    }
+    .project-list{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px){
+    .project-image-container{
+        height: 400px;
+        width: 260px;
+    }
+    .project-title{
+        font-size: 3rem;
+    }
+    .project-information{
+        font-size: 0.8rem;
+        width: 300px;
+    }
+    .project-list{
+        font-size: 0.8rem;
+    }
 }

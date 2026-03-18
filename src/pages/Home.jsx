@@ -3,6 +3,7 @@ import Experience from '../components/Experience/Experience'
 import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 import Skills from '../components/Skills/Skills'
+import Testimonials from '../components/Testimonials/Testimonials'
 import "./Home.css"
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
         <section id="skills"><Skills /></section>
         <section id="educarion"><Education /></section>
         <section id="experience"><Experience /></section>
+        <section id="testimonials"><Testimonials /></section>
         <Footer />
         </>
     )

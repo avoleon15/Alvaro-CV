@@ -1,0 +1,38 @@
+.testimonials-container{
+    padding: 10%;
+    margin: 10% 0px;
+}
+
+.testimonial-title{
+    font-size: 3rem;
+}
+
+.testimonial{
+    padding: 20px 0px;
+}
+
+.testimonial-message{
+    font-size: 1rem;
+}
+
+.testimonial-author{
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px){
+    .testimonial-message{
+        font-size: 0.9rem;
+    }
+    .testimonial-author{
+        font-size: 1.1rem
+    }
+}
+
+@media (max-width: 480px){
+    .testimonial-message{
+        font-size: 0.8rem;
+    }
+    .testimonial-author{
+        font-size: 1rem
+    }
+}

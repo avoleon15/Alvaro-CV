@@ -1,11 +1,13 @@
+import useNasaService from '../../services/NasaService.js';
 import './Header.css';
 
 function Header() {
 
+    const {nasaData, loading} = useNasaService()
+
 return (
 
-<>
-    <header className='darkblue-color'>
+    <header style={{ '--nasa-image': nasaData ? `url(${nasaData.url})` : 'none' }}>
         <nav>
             <h5 id="contact" className='font-unbun'>Contact Me</h5>
             <ul id="linksSection">
@@ -25,7 +27,7 @@ return (
             <a href='#education'><li className='link-button font-unbun'>Education</li></a>
         </ul>
     </header>
-</>
+
 )
 }
 
