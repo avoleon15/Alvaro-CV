@@ -121,6 +121,8 @@ app.get('/testimonials', (req, res) => {
     res.json(testimonials);
 });
 
+//curl http://localhost:3001/testimonials
+
 // GET. Ver el testimonial por ID
 app.get('/testimonials/:id', (req, res) => {
     const index = testimonials.findIndex(p => p.id === parseInt(req.params.id));
@@ -132,6 +134,7 @@ app.get('/testimonials/:id', (req, res) => {
     testimonials[index] = { ...testimonials[index], ...req.body };
     res.json(testimonials[index]);
 });
+//curl http://localhost:3001/testimonials/1
 
 // GET. Agregar un testimonial a los testimonials
 app.post('/testimonials', (req, res) => {
@@ -167,9 +170,26 @@ app.post('/testimonials', (req, res) => {
 });
 
 /*
-curl -X POST http://localhost:3001/projects \
+curl -X POST http://localhost:3001/testimonials \
 -H "Content-Type: application/json" \
--d '{"author": "Gladys" ,"role": "catedratico", "company": "UFM", "text": "Muy bien Alumno ese Alvaro", "createdAT": "2025-02-7"}'
+-d '{"author": "Gladys" ,"role": "catedratico", "company": "UFM", "text": "Muy bien Alumno ese Alvaro", "createdAt": "2025-02-7"}'
+*/
+
+// PATCH /testimonials/id modifica un documento
+app.patch('/testimonials/:id', (req, res) => {
+    const index = testimonials.findIndex(p => p.id === parseInt(req.params.id));
+
+    if (index === -1) {
+        return res.status(404).json({ error: 'Testimonial no encontrado' });
+    }
+
+    testimonials[index] = { ...testimonials[index], ...req.body };
+    res.json(testimonials[index]);
+});
+/*
+curl -X PATCH http://localhost:3001/testimonials/1 \
+-H "Content-Type: application/json" \
+-d '{"author": "Gladys" ,"role": "catedratico", "company": "UFM", "text": "Muy bien Alumno ese Alvaro", "createdAt": "2025-02-7"}'
 */
 
 app.listen(PORT, () => {
