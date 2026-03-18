@@ -9,7 +9,7 @@ const PORT = 3001;
 app.use(cors());
 app.use(express.json());
 
-let nextId = 4;
+const nextId = 4;
 
 // TESTIMONIALS
 

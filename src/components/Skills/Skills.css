@@ -70,18 +70,25 @@
     .skill-container h4{
         font-size: 17px;
     }
+    .icon{
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 480px){
     .skills-title{
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
     .skill-container{
-        width: 140px;
+        width: 100px;
         margin: 20px;
         padding: 10px;
     }
     .skill-container h4{
         font-size: 14px;
+        padding: 4px;
+    }
+    .icon{
+        font-size: 3rem;
     }
 }

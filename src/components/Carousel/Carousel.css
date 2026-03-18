@@ -124,7 +124,7 @@
     width: 35px;
     height: 35px;
     font-size: 15px;
-}
+    }
 }
 
 @media (max-width: 768px){
@@ -139,18 +139,26 @@
     .information{
         font-size: 14px;
     }
+    .information-button{
+        padding: 12px 25px;
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 480px){
     .left-project, .right-project{
-        width: 110px;
+        width: 80px;
         height: 130px;
     }
     .middle-project{
-        width: 270px;
-        height: 320px;
+        width: 200px;
+        height: 280px;
     }
     .information{
+        font-size: 12px;
+    }
+    .information-button{
+        padding: 8px 18px;
         font-size: 12px;
     }
 }
