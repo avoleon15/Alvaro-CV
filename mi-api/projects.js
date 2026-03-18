@@ -133,6 +133,45 @@ app.get('/testimonials/:id', (req, res) => {
     res.json(testimonials[index]);
 });
 
+// GET. Agregar un testimonial a los testimonials
+app.post('/testimonials', (req, res) => {
+    const { author, role, company, text, createdAt } = req.body;
+
+    if (!author) {
+        return res.status(400).json({ error: 'El campo "author" es requerido' });
+    }
+    if (!role) {
+        return res.status(400).json({ error: 'El campo "role" es requerido' });
+    }
+    if (!company) {
+        return res.status(400).json({ error: 'El campo "company" es requerido' });
+    }
+    if (!text) {
+        return res.status(400).json({ error: 'El campo "text" es requerido' });
+    }
+    if (!createdAt) {
+        return res.status(400).json({ error: 'El campo "createdAt" es requerido' });
+    }
+
+    const newTestimonial = {
+        id: nextId++,
+        author,
+        role,
+        company,
+        text,
+        createdAt
+    };
+
+    testimonials.push(newTestimonial);
+    res.status(201).json(newTestimonial);
+});
+
+/*
+curl -X POST http://localhost:3001/projects \
+-H "Content-Type: application/json" \
+-d '{"author": "Gladys" ,"role": "catedratico", "company": "UFM", "text": "Muy bien Alumno ese Alvaro", "createdAT": "2025-02-7"}'
+*/
+
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
