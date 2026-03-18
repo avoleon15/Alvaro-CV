@@ -1,5 +1,6 @@
-const express = require('express');
-const cors = require('cors');
+import cors from 'cors';
+import express from 'express';
+import { testimonials } from '../mi-api/models/testimonials.js';
 
 const app = express();
 const PORT = 3001;
@@ -7,34 +8,6 @@ const PORT = 3001;
 // Middlewares
 app.use(cors());
 app.use(express.json());
-
-// Base de datos en memoria
-let testimonials = [
-    {
-        id: 1,
-        author: 'Fritz Thomas',
-        role: 'Catedratico',
-        company: 'UFM',
-        text: 'Desarrollo de una aplicación en Angular enfocada en la gestión de tareas académicas. Incluye autenticación, manejo de estado y consumo de APIs REST.',
-        createdAt: '2024-03-15'
-    },
-    {
-        id: 2,
-        author: 'Arely Socop',
-        role: 'Catedratico',
-        company: 'UFM',
-        text: 'Construcción de una API con Express y Node.js para manejar usuarios, autenticación JWT y conexión a base de datos MongoDB.',
-        createdAt: '2024-04-02'
-    },
-    {
-        id: 3,
-        author: 'Kenneth',
-        role: 'Catedratico',
-        company: 'UFM',
-        text: 'Desarrollo de un portafolio web personal utilizando React, con diseño responsive, integración de proyectos y despliegue en GitHub Pages.',
-        createdAt: '2024-05-10'
-    }
-]
 
 let nextId = 4;
 
@@ -47,14 +20,13 @@ app.get('/testimonials', (req, res) => {
 
 // GET. See a testimonial by ID
 app.get('/testimonials/:id', (req, res) => {
-    const index = testimonials.findIndex(p => p.id === parseInt(req.params.id));
+    const testimonial = testimonials.find(p => p.id === parseInt(req.params.id));
 
-    if (index === -1) {
+    if (!testimonial) {
         return res.status(404).json({ error: 'Testimonial no encontrado' });
     }
 
-    testimonials[index] = { ...testimonials[index], ...req.body };
-    res.json(testimonials[index]);
+    res.json(testimonial);
 });
 
 
@@ -115,13 +87,13 @@ app.delete('/testimonials/:id', (req, res) => {
     res.json({ message: 'Testimonial eliminado', testimonials: deleted[0] });
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
-
 app.use((req, res) => {
     res.status(404).json({
         error: 'Ruta no encontrada',
         mensaje: `La ruta ${req.url} no existe`
     })
 })
+
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+});
