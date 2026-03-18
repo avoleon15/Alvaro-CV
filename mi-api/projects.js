@@ -121,6 +121,18 @@ app.get('/testimonials', (req, res) => {
     res.json(testimonials);
 });
 
+// GET. Ver el testimonial por ID
+app.get('/testimonials/:id', (req, res) => {
+    const index = testimonials.findIndex(p => p.id === parseInt(req.params.id));
+
+    if (index === -1) {
+        return res.status(404).json({ error: 'Testimonial no encontrado' });
+    }
+
+    testimonials[index] = { ...testimonials[index], ...req.body };
+    res.json(testimonials[index]);
+});
+
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
